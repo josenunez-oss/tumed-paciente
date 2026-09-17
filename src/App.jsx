@@ -18,8 +18,8 @@ export default function App() {
         <Route path="/doctors" element={<Doctors />} />
         <Route path="/doctor/:id" element={<DoctorDetail />} />
         <Route path="/book/:id" element={<BookAppointment />} />
-        <Route path="/my-appointments" element={<MyAppointments />} />
-        <Route path="/report" element={<Report />} />
+        <Route path="/mis-citas" element={<MyAppointments />} />
+        <Route path="/reportar" element={<Report />} />
       </Routes>
     </BrowserRouter>
   );
