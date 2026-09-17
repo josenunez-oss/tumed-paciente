@@ -15,11 +15,4 @@ export default function Login() {
   }
 
   return (
-    <form onSubmit={handleLogin} style={{ padding: 40, maxWidth: 400 }}>
-      <h2>Iniciar sesión</h2>
-      <input placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
-      <input type="password" placeholder="Contraseña" value={password} onChange={(e) => setPassword(e.target.value)} />
-      <button type="submit">Entrar</button>
-    </form>
-  );
-}
+    <form onSubmit={
