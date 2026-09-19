@@ -36,7 +36,6 @@ export default function TopBar() {
       </button>
 
       <div style={{ display: "flex", gap: 12, alignItems: "center" }}>
-        {/* Cuenta: pictograma de persona */}
         <Link
           to="/mis-citas"
           title="Cuenta"
@@ -56,7 +55,6 @@ export default function TopBar() {
           🚻
         </Link>
 
-        {/* Información de pago: billetera */}
         <Link
           to="/mis-citas"
           title="Información de pago"
@@ -76,7 +74,6 @@ export default function TopBar() {
           👛
         </Link>
 
-        {/* Citas: calendario */}
         <Link
           to="/mis-citas"
           title="Citas"
@@ -96,6 +93,27 @@ export default function TopBar() {
           📅
         </Link>
 
-        {/* Cerrar sesión: puerta pequeña */}
         <button
-          onClick={cerrarS
+          onClick={cerrarSesion}
+          title="Cerrar sesión"
+          style={{
+            background: "#C0392B",
+            border: "none",
+            borderRadius: 10,
+            width: 34,
+            height: 34,
+            cursor: "pointer",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            boxShadow: "0 2px 6px rgba(192,57,43,0.3)",
+          }}
+        >
+          <span style={{ fontSize: 8, fontWeight: 700, color: "#fff", letterSpacing: 0.5, lineHeight: 1 }}>
+            EXIT
+          </span>
+        </button>
+      </div>
+    </div>
+  );
+}
