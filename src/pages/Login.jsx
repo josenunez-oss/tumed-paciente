@@ -25,12 +25,12 @@ export default function Login() {
     // Revisa si el correo pertenece a un doctor
     const { data: doctor } = await supabase.from('doctores').select('id').eq('email', email).maybeSingle()
     if (doctor) {
-      navigate('/doctor')
+      navigate('/doctors')
       return
     }
 
     // Si no es doctor, es paciente
-    navigate('/paciente')
+    navigate('/')
   }
 
   return (
@@ -65,7 +65,7 @@ export default function Login() {
           </button>
         </form>
         <p className="text-center text-sm mt-4 text-inkSoft">
-          ¿Eres nuevo? <Link to="/registro" className="text-accent font-semibold">Regístrate</Link>
+          ¿Eres nuevo? <Link to="/register" className="text-accent font-semibold">Regístrate</Link>
         </p>
       </div>
 
