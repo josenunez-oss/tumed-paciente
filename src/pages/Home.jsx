@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { supabase } from "../lib/supabase.js";
 import BannerDoctores from "../components/BannerDoctores.jsx";
+import TopBar from "../components/TopBar.jsx";
 
 export default function Home() {
   const [sesion, setSesion] = useState(false);
   const [nombre, setNombre] = useState("");
-  const navigate = useNavigate();
 
   useEffect(() => {
     async function verificar() {
@@ -24,12 +24,6 @@ export default function Home() {
     verificar();
   }, []);
 
-  async function cerrarSesion() {
-    await supabase.auth.signOut();
-    navigate('/');
-  }
-
-  // Si NO hay sesión: pantalla de bienvenida con botones
   if (!sesion) {
     return (
       <div style={{
@@ -85,7 +79,6 @@ export default function Home() {
     );
   }
 
-  // Si SÍ hay sesión: panel del paciente con botón de cerrar sesión
   const primerNombre = nombre ? nombre.split(" ")[0] : "";
   return (
     <div style={{
@@ -93,35 +86,13 @@ export default function Home() {
       display: "flex",
       flexDirection: "column",
       alignItems: "center",
-      justifyContent: "center",
+      justifyContent: "flex-start",
       background: "#EFF3EF",
       padding: 20,
       textAlign: "center",
     }}>
       <div style={{ maxWidth: 600, width: "100%" }}>
-        {/* Botón de cerrar sesión: puerta roja con EXIT */}
-        <div style={{ display: "flex", justifyContent: "flex-end", marginBottom: 16 }}>
-          <button
-            onClick={cerrarSesion}
-            title="Cerrar sesión"
-            style={{
-              background: "#C0392B",
-              border: "none",
-              borderRadius: 6,
-              width: 40,
-              height: 40,
-              cursor: "pointer",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              transition: "all 0.2s",
-            }}
-          >
-            <span style={{ fontSize: 10, fontWeight: 700, color: "#fff", letterSpacing: 1, lineHeight: 1 }}>
-              EXIT
-            </span>
-          </button>
-        </div>
+        <TopBar />
 
         <h1 style={{ color: "#1F4D45", fontSize: 40, fontWeight: 700, marginBottom: 8 }}>
           Bienvenido/a{primerNombre ? `, ${primerNombre}` : ""}
