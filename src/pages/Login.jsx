@@ -22,14 +22,12 @@ export default function Login() {
       return
     }
 
-    // Revisa si el correo pertenece a un doctor
     const { data: doctor } = await supabase.from('doctores').select('id').eq('email', email).maybeSingle()
     if (doctor) {
       navigate('/doctors')
       return
     }
 
-    // Si no es doctor, es paciente
     navigate('/')
   }
 
@@ -69,7 +67,6 @@ export default function Login() {
         </p>
       </div>
 
-      {/* Banner debajo del formulario */}
       <div className="w-full max-w-sm mt-6">
         <BannerDoctores />
       </div>
