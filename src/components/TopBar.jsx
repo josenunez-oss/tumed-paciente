@@ -5,8 +5,10 @@ export default function TopBar() {
   const navigate = useNavigate();
 
   async function cerrarSesion() {
-    await supabase.auth.signOut();
-    navigate('/');
+    const { error } = await supabase.auth.signOut();
+    if (!error) {
+      window.location.href = '/';
+    }
   }
 
   return (
@@ -33,60 +35,67 @@ export default function TopBar() {
         ←
       </button>
 
-      <div style={{ display: "flex", gap: 8, alignItems: "center" }}>
+      <div style={{ display: "flex", gap: 12, alignItems: "center" }}>
+        {/* Cuenta: pictograma de persona */}
         <Link
           to="/mis-citas"
+          title="Cuenta"
           style={{
-            padding: "8px 14px",
-            borderRadius: 8,
-            background: "#fff",
-            color: "#1F4D45",
-            fontSize: 13,
-            fontWeight: 600,
-            textDecoration: "none",
-            border: "1px solid #DFE3DE",
-          }}
-        >
-          Cuenta
-        </Link>
-        <Link
-          to="/mis-citas"
-          style={{
-            padding: "8px 14px",
-            borderRadius: 8,
-            background: "#fff",
-            color: "#1F4D45",
-            fontSize: 13,
-            fontWeight: 600,
-            textDecoration: "none",
-            border: "1px solid #DFE3DE",
-          }}
-        >
-          Pagos
-        </Link>
-
-        <button
-          onClick={cerrarSesion}
-          title="Cerrar sesión"
-          style={{
-            background: "#C0392B",
-            border: "none",
+            width: 44,
+            height: 44,
             borderRadius: 10,
-            width: 34,
-            height: 34,
-            cursor: "pointer",
+            background: "#fff",
+            border: "1px solid #DFE3DE",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            transition: "all 0.2s",
-            boxShadow: "0 2px 6px rgba(192,57,43,0.3)",
+            fontSize: 22,
+            textDecoration: "none",
           }}
         >
-          <span style={{ fontSize: 8, fontWeight: 700, color: "#fff", letterSpacing: 0.5, lineHeight: 1 }}>
-            EXIT
-          </span>
-        </button>
-      </div>
-    </div>
-  );
-}
+          🚻
+        </Link>
+
+        {/* Información de pago: billetera */}
+        <Link
+          to="/mis-citas"
+          title="Información de pago"
+          style={{
+            width: 44,
+            height: 44,
+            borderRadius: 10,
+            background: "#fff",
+            border: "1px solid #DFE3DE",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            fontSize: 22,
+            textDecoration: "none",
+          }}
+        >
+          👛
+        </Link>
+
+        {/* Citas: calendario */}
+        <Link
+          to="/mis-citas"
+          title="Citas"
+          style={{
+            width: 44,
+            height: 44,
+            borderRadius: 10,
+            background: "#fff",
+            border: "1px solid #DFE3DE",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            fontSize: 22,
+            textDecoration: "none",
+          }}
+        >
+          📅
+        </Link>
+
+        {/* Cerrar sesión: puerta pequeña */}
+        <button
+          onClick={cerrarS
