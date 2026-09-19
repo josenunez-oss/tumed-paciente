@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { supabase } from "../lib/supabase.js";
 import BannerDoctores from "../components/BannerDoctores.jsx";
 import TopBar from "../components/TopBar.jsx";
+import FechaActual from "../components/FechaActual.jsx";
 
 export default function Home() {
   const [sesion, setSesion] = useState(false);
@@ -106,25 +107,29 @@ export default function Home() {
         </p>
 
         {/* Botones grandes en el centro */}
-        <div style={{ display: "flex", gap: 16, justifyContent: "center", flexWrap: "wrap" }}>
+        <div style={{ display: "flex", gap: 14, justifyContent: "center", flexWrap: "wrap" }}>
           <Link
             to="/perfil"
             style={{
-              width: 110,
-              height: 110,
-              borderRadius: 16,
-              background: "#fff",
+              width: 120,
+              height: 120,
+              borderRadius: 20,
+              background: "#FFFFFF",
               border: "1px solid #DFE3DE",
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
               justifyContent: "center",
               textDecoration: "none",
-              boxShadow: "0 2px 8px rgba(0,0,0,0.06)",
+              boxShadow: "0 2px 10px rgba(31,77,69,0.08)",
             }}
           >
-            <span style={{ fontSize: 44 }}>🚹</span>
-            <span style={{ fontSize: 14, fontWeight: 700, color: "#1F4D45", marginTop: 6 }}>
+            <img
+              src="/assets/foto-persona.png"
+              alt="Perfil"
+              style={{ width: 48, height: 48, objectFit: "contain", opacity: 0.9 }}
+            />
+            <span style={{ fontSize: 13, fontWeight: 600, color: "#1F4D45", marginTop: 8, letterSpacing: 0.3 }}>
               Perfil
             </span>
           </Link>
@@ -132,21 +137,25 @@ export default function Home() {
           <Link
             to="/pagos"
             style={{
-              width: 110,
-              height: 110,
-              borderRadius: 16,
-              background: "#fff",
+              width: 120,
+              height: 120,
+              borderRadius: 20,
+              background: "#FFFFFF",
               border: "1px solid #DFE3DE",
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
               justifyContent: "center",
               textDecoration: "none",
-              boxShadow: "0 2px 8px rgba(0,0,0,0.06)",
+              boxShadow: "0 2px 10px rgba(31,77,69,0.08)",
             }}
           >
-            <span style={{ fontSize: 44 }}>👛</span>
-            <span style={{ fontSize: 14, fontWeight: 700, color: "#1F4D45", marginTop: 6 }}>
+            <img
+              src="/assets/foto-billetera.png"
+              alt="Información de pago"
+              style={{ width: 48, height: 48, objectFit: "contain", opacity: 0.9 }}
+            />
+            <span style={{ fontSize: 13, fontWeight: 600, color: "#1F4D45", marginTop: 8, letterSpacing: 0.3 }}>
               Información de pago
             </span>
           </Link>
@@ -154,21 +163,21 @@ export default function Home() {
           <Link
             to="/mis-citas"
             style={{
-              width: 110,
-              height: 110,
-              borderRadius: 16,
-              background: "#fff",
+              width: 120,
+              height: 120,
+              borderRadius: 20,
+              background: "#FFFFFF",
               border: "1px solid #DFE3DE",
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
               justifyContent: "center",
               textDecoration: "none",
-              boxShadow: "0 2px 8px rgba(0,0,0,0.06)",
+              boxShadow: "0 2px 10px rgba(31,77,69,0.08)",
             }}
           >
-            <span style={{ fontSize: 44 }}>📅</span>
-            <span style={{ fontSize: 14, fontWeight: 700, color: "#1F4D45", marginTop: 6 }}>
+            <FechaActual />
+            <span style={{ fontSize: 13, fontWeight: 600, color: "#1F4D45", marginTop: 8, letterSpacing: 0.3 }}>
               Citas
             </span>
           </Link>
