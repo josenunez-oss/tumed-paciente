@@ -8,6 +8,7 @@ import BookAppointment from "./pages/BookAppointment.jsx";
 import MyAppointments from "./pages/MyAppointments.jsx";
 import Report from "./pages/Report.jsx";
 import Perfil from "./pages/Perfil.jsx";
+import Pagos from "./pages/Pagos.jsx";
 
 export default function App() {
   return (
@@ -22,6 +23,7 @@ export default function App() {
         <Route path="/mis-citas" element={<MyAppointments />} />
         <Route path="/reportar" element={<Report />} />
         <Route path="/perfil" element={<Perfil />} />
+        <Route path="/pagos" element={<Pagos />} />
       </Routes>
     </BrowserRouter>
   );
