@@ -7,6 +7,7 @@ import DoctorDetail from "./pages/DoctorDetail.jsx";
 import BookAppointment from "./pages/BookAppointment.jsx";
 import MyAppointments from "./pages/MyAppointments.jsx";
 import Report from "./pages/Report.jsx";
+import Perfil from "./pages/Perfil.jsx";
 
 export default function App() {
   return (
@@ -20,6 +21,7 @@ export default function App() {
         <Route path="/book/:id" element={<BookAppointment />} />
         <Route path="/mis-citas" element={<MyAppointments />} />
         <Route path="/reportar" element={<Report />} />
+        <Route path="/perfil" element={<Perfil />} />
       </Routes>
     </BrowserRouter>
   );
