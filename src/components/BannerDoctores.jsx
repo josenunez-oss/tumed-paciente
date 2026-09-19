@@ -6,15 +6,11 @@ export default function BannerDoctores() {
       rel="noopener noreferrer"
       className="relative block overflow-hidden rounded-2xl shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group"
     >
-      {/* Fondo con la foto distorsionada */}
       <div
         className="absolute inset-0 bg-cover bg-center blur-[2px] scale-105 transition-transform duration-500 group-hover:scale-110"
         style={{ backgroundImage: "url('https://images.pexels.com/photos/7653084/pexels-photo-7653084.jpeg?auto=compress&cs=tinysrgb&w=1200')" }}
       />
-      {/* Capa oscura para legibilidad */}
       <div className="absolute inset-0 bg-brand/60 transition-colors duration-300 group-hover:bg-brand/40" />
-
-      {/* Contenido */}
       <div className="relative p-6 text-white">
         <h3 className="text-2xl font-serif font-semibold">¿Eres médico?</h3>
         <p className="mt-1 text-white/90">Regístrate en la web de doctores y comienza a atender consultas.</p>
@@ -24,4 +20,3 @@ export default function BannerDoctores() {
       </div>
     </a>
   )
-}
