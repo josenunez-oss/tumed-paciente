@@ -92,13 +92,8 @@ export default function Home() {
       textAlign: "center",
     }}>
       <div style={{ maxWidth: 600, width: "100%" }}>
-        {/* Banner arriba del todo (ocultable) */}
         <BannerDoctores />
-
-        {/* Flecha y EXIT */}
         <TopBar />
-
-        {/* Saludo: con nombre o genérico */}
         <h1 style={{ color: "#1F4D45", fontSize: 36, fontWeight: 700, margin: "16px 0 8px 0" }}>
           {primerNombre ? `Bienvenido/a, ${primerNombre}` : "Bienvenido/a a TuMed"}
         </h1>
@@ -106,7 +101,6 @@ export default function Home() {
           Encuentra a tu médico y agenda tu cita en minutos.
         </p>
 
-        {/* Botones grandes en el centro */}
         <div style={{ display: "flex", gap: 14, justifyContent: "center", flexWrap: "wrap" }}>
           <Link
             to="/perfil"
@@ -124,12 +118,7 @@ export default function Home() {
               boxShadow: "0 2px 10px rgba(31,77,69,0.08)",
             }}
           >
-            <img
-              src="/assets/foto-persona.png"
-              alt="Perfil"
-              style={{ width: 48, height: 48, objectFit: "contain", opacity: 0.9 }}
-            />
-            <span style={{ fontSize: 13, fontWeight: 600, color: "#1F4D45", marginTop: 8, letterSpacing: 0.3 }}>
+            <span style={{ fontSize: 15, fontWeight: 600, color: "#1F4D45", letterSpacing: 0.3 }}>
               Perfil
             </span>
           </Link>
@@ -150,13 +139,11 @@ export default function Home() {
               boxShadow: "0 2px 10px rgba(31,77,69,0.08)",
             }}
           >
-            <img
-              src="/assets/foto-billetera.png"
-              alt="Información de pago"
-              style={{ width: 48, height: 48, objectFit: "contain", opacity: 0.9 }}
-            />
-            <span style={{ fontSize: 13, fontWeight: 600, color: "#1F4D45", marginTop: 8, letterSpacing: 0.3 }}>
-              Información de pago
+            <span style={{ fontSize: 15, fontWeight: 600, color: "#1F4D45", letterSpacing: 0.3 }}>
+              Información
+            </span>
+            <span style={{ fontSize: 15, fontWeight: 600, color: "#1F4D45", letterSpacing: 0.3 }}>
+              de pago
             </span>
           </Link>
 
@@ -177,7 +164,7 @@ export default function Home() {
             }}
           >
             <FechaActual />
-            <span style={{ fontSize: 13, fontWeight: 600, color: "#1F4D45", marginTop: 8, letterSpacing: 0.3 }}>
+            <span style={{ fontSize: 15, fontWeight: 600, color: "#1F4D45", marginTop: 8, letterSpacing: 0.3 }}>
               Citas
             </span>
           </Link>
