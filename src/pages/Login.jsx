@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { supabase } from "../lib/supabase.js";
 import { useNavigate, Link } from "react-router-dom";
+import BannerDoctores from '../components/BannerDoctores.jsx'
 
 export default function Login() {
   const [email, setEmail] = useState("");
