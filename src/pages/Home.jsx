@@ -4,6 +4,7 @@ import { supabase } from "../lib/supabase.js";
 import BannerDoctores from "../components/BannerDoctores.jsx";
 import TopBar from "../components/TopBar.jsx";
 import FechaActual from "../components/FechaActual.jsx";
+import FondoOlas from "../components/FondoOlas.jsx";
 
 const IconoPerfil = () => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="#204C47" style={{ width: 44, height: 44 }}>
@@ -55,11 +56,12 @@ export default function Home() {
         padding: 20,
         textAlign: "center",
       }}>
+        <FondoOlas />
         <div style={{ maxWidth: 600, width: "100%" }}>
-          <h1 style={{ color: "#1F4D45", fontSize: 40, fontWeight: 700, marginBottom: 8 }}>
+          <h1 style={{ color: "#FFFFFF", fontSize: 40, fontWeight: 700, marginBottom: 8 }}>
             Bienvenido/a a TuMed
           </h1>
-          <p style={{ color: "#5B655F", fontSize: 18, marginBottom: 32 }}>
+          <p style={{ color: "#D6E8E5", fontSize: 18, marginBottom: 32 }}>
             Encuentra a tu médico y agenda tu cita en minutos.
           </p>
           <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
@@ -68,8 +70,8 @@ export default function Home() {
               style={{
                 padding: "14px 28px",
                 borderRadius: 8,
-                background: "#1F4D45",
-                color: "#fff",
+                background: "#FFFFFF",
+                color: "#1F4D45",
                 fontSize: 16,
                 fontWeight: 600,
                 textDecoration: "none",
@@ -82,12 +84,12 @@ export default function Home() {
               style={{
                 padding: "14px 28px",
                 borderRadius: 8,
-                background: "#fff",
-                color: "#1F4D45",
+                background: "transparent",
+                color: "#FFFFFF",
                 fontSize: 16,
                 fontWeight: 600,
                 textDecoration: "none",
-                border: "1px solid #1F4D45",
+                border: "1px solid #FFFFFF",
               }}
             >
               Iniciar sesión
@@ -109,6 +111,7 @@ export default function Home() {
       padding: 20,
       textAlign: "center",
     }}>
+      <FondoOlas />
       <div style={{ maxWidth: 600, width: "100%" }}>
         <BannerDoctores />
         <TopBar />
