@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { supabase } from "../lib/supabase.js";
 
 export default function TopBar() {
@@ -35,85 +35,26 @@ export default function TopBar() {
         ←
       </button>
 
-      <div style={{ display: "flex", gap: 12, alignItems: "center" }}>
-        <Link
-          to="/mis-citas"
-          title="Cuenta"
-          style={{
-            width: 44,
-            height: 44,
-            borderRadius: 10,
-            background: "#fff",
-            border: "1px solid #DFE3DE",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            fontSize: 22,
-            textDecoration: "none",
-          }}
-        >
-          🚻
-        </Link>
-
-        <Link
-          to="/mis-citas"
-          title="Información de pago"
-          style={{
-            width: 44,
-            height: 44,
-            borderRadius: 10,
-            background: "#fff",
-            border: "1px solid #DFE3DE",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            fontSize: 22,
-            textDecoration: "none",
-          }}
-        >
-          👛
-        </Link>
-
-        <Link
-          to="/mis-citas"
-          title="Citas"
-          style={{
-            width: 44,
-            height: 44,
-            borderRadius: 10,
-            background: "#fff",
-            border: "1px solid #DFE3DE",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            fontSize: 22,
-            textDecoration: "none",
-          }}
-        >
-          📅
-        </Link>
-
-        <button
-          onClick={cerrarSesion}
-          title="Cerrar sesión"
-          style={{
-            background: "#C0392B",
-            border: "none",
-            borderRadius: 10,
-            width: 34,
-            height: 34,
-            cursor: "pointer",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            boxShadow: "0 2px 6px rgba(192,57,43,0.3)",
-          }}
-        >
-          <span style={{ fontSize: 8, fontWeight: 700, color: "#fff", letterSpacing: 0.5, lineHeight: 1 }}>
-            EXIT
-          </span>
-        </button>
-      </div>
+      <button
+        onClick={cerrarSesion}
+        title="Cerrar sesión"
+        style={{
+          background: "#C0392B",
+          border: "none",
+          borderRadius: 10,
+          width: 34,
+          height: 34,
+          cursor: "pointer",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          boxShadow: "0 2px 6px rgba(192,57,43,0.3)",
+        }}
+      >
+        <span style={{ fontSize: 8, fontWeight: 700, color: "#fff", letterSpacing: 0.5, lineHeight: 1 }}>
+          EXIT
+        </span>
+      </button>
     </div>
   );
 }
