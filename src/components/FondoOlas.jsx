@@ -4,8 +4,8 @@ export default function FondoOlas() {
       position: "fixed",
       top: 0,
       left: 0,
-      right: 0,
-      bottom: 0,
+      width: "100vw",
+      height: "100vh",
       zIndex: -1,
       background: "#0E3B3A",
       overflow: "hidden",
@@ -36,13 +36,14 @@ export default function FondoOlas() {
         background: "linear-gradient(180deg, rgba(14,59,58,0.55), rgba(14,59,58,0.85))",
       }} />
 
-      {/* Olas en movimiento */}
+      {/* Olas en movimiento, cubriendo toda la pantalla */}
       <svg
         viewBox="0 0 1440 320"
         preserveAspectRatio="none"
         style={{
           position: "absolute",
-          bottom: 0,
+          top: 0,
+          left: 0,
           width: "100%",
           height: "100%",
           opacity: 0.5,
