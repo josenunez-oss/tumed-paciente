@@ -107,11 +107,10 @@ export default function Home() {
       display: "flex",
       flexDirection: "column",
       alignItems: "center",
-      background: "transparent",
+      background: "#EFF3EF",
       padding: 20,
       textAlign: "center",
     }}>
-      <FondoOlas />
       <div style={{ maxWidth: 600, width: "100%" }}>
         <BannerDoctores />
         <TopBar />

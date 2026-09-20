@@ -39,20 +39,24 @@ export default function TopBar() {
         onClick={cerrarSesion}
         title="Cerrar sesión"
         style={{
-          background: "#C0392B",
-          border: "none",
-          borderRadius: 10,
-          width: 34,
-          height: 34,
+          background: "transparent",
+          border: "1px solid #E3B8B2",
+          borderRadius: 8,
+          padding: "6px 12px",
           cursor: "pointer",
           display: "flex",
           alignItems: "center",
-          justifyContent: "center",
-          boxShadow: "0 2px 6px rgba(192,57,43,0.3)",
+          gap: 6,
+          color: "#B5564B",
         }}
       >
-        <span style={{ fontSize: 8, fontWeight: 700, color: "#fff", letterSpacing: 0.5, lineHeight: 1 }}>
-          EXIT
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ width: 15, height: 15 }}>
+          <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+          <polyline points="16 17 21 12 16 7" />
+          <line x1="21" y1="12" x2="9" y2="12" />
+        </svg>
+        <span style={{ fontSize: 13, fontWeight: 600, lineHeight: 1 }}>
+          Salir
         </span>
       </button>
     </div>
