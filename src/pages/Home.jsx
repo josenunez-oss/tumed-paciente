@@ -52,7 +52,7 @@ export default function Home() {
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
-        background: "#EFF3EF",
+        background: "transparent",
         padding: 20,
         textAlign: "center",
       }}>
@@ -107,7 +107,7 @@ export default function Home() {
       display: "flex",
       flexDirection: "column",
       alignItems: "center",
-      background: "#EFF3EF",
+      background: "transparent",
       padding: 20,
       textAlign: "center",
     }}>
