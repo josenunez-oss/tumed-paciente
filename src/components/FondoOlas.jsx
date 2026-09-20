@@ -12,7 +12,7 @@ export default function FondoOlas() {
     }}>
       {/* Foto de fondo (estetoscopio, relacionada con TuMed) */}
       <img
-        src="https://images.unsplash.com/photo-1655313719493-16ebe4906441?fm=jpg&q=60&w=2000&auto=format&fit=crop"
+        src="https://images.pexels.com/photos/4386466/pexels-photo-4386466.jpeg?auto=compress&cs=tinysrgb&w=1920"
         alt=""
         style={{
           position: "absolute",
